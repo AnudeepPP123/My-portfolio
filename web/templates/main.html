@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ANUDEEP P P — Portfolio</title>
+  <meta name="description" content="Portfolio of ANUDEEP P P — Computer Science Student" />
+  <style>
+    /* ========== Variables & Reset ========== */
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#6ee7b7; /* mint */
+      --glass: rgba(255,255,255,0.04);
+      --max-width:1100px;
+      --radius:14px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      background: radial-gradient(1000px 400px at 10% 10%, #071028 0%, transparent 10%),
+                  linear-gradient(180deg,#071024 0%, var(--bg) 50%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:32px 16px;
+      display:flex;
+      justify-content:center;
+      font-size:16px;
+    }
+    .wrap{width:100%;max-width:var(--max-width)}
+
+    /* ========== Header ========== */
+    header{
+      display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:56px;height:56px;background:linear-gradient(135deg,var(--accent),#60a5fa);
+      border-radius:12px;display:grid;place-items:center;font-weight:700;color:#023;
+      box-shadow:0 6px 18px rgba(8,15,25,0.6);
+    }
+    .brand h1{font-size:18px;letter-spacing:0.4px}
+    nav{display:flex;gap:14px}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px}
+    nav a:hover{background:var(--glass);color:#fff}
+
+    /* ========== Hero ========== */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-bottom:28px}
+    @media (max-width:880px){.hero{grid-template-columns:1fr;}}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+          border-radius:var(--radius);padding:20px;box-shadow:0 6px 30px rgba(2,6,23,0.7)}
+
+    .intro h2{font-size:28px;margin-bottom:8px}
+    .intro p{color:var(--muted);margin-bottom:14px}
+    .cta{display:flex;gap:12px}
+    .btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px;color:#eaf7f0;text-decoration:none}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#60a5fa);color:#022}
+
+    .profile{display:flex;flex-direction:column;align-items:center;gap:12px;padding:24px;text-align:center}
+    .avatar{width:160px;height:160px;border-radius:20px;background:linear-gradient(135deg,#7dd3fc,#60a5fa);display:grid;place-items:center;font-size:48px;font-weight:700;color:#012}
+    .tag{color:var(--muted);font-size:14px}
+
+    /* ========== Main area ========== */
+    .grid-2{display:grid;grid-template-columns:1fr 380px;gap:28px}
+    @media (max-width:1100px){.grid-2{grid-template-columns:1fr}}
+
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    @media (max-width:720px){.projects{grid-template-columns:1fr}}
+
+    .proj-card{background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .proj-card h3{margin-bottom:6px}
+    .proj-card p{color:var(--muted);font-size:14px;margin-bottom:8px}
+    .tech{font-size:13px;color:var(--muted)}
+
+    .skills{display:flex;flex-direction:column;gap:10px}
+    .skill{display:flex;justify-content:space-between;align-items:center}
+    .bar{flex:1;height:10px;background:rgba(255,255,255,0.04);border-radius:999px;margin-left:10px;overflow:hidden}
+    .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#60a5fa)}
+
+    /* ========== Contact ========== */
+    .contact form{display:flex;flex-direction:column;gap:10px}
+    .contact input,.contact textarea{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:8px;color:inherit}
+    .contact textarea{min-height:120px}
+
+    /* ========== Footer ========== */
+    footer{margin-top:28px;color:var(--muted);font-size:14px;text-align:center}
+
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .row{display:flex;gap:12px;align-items:center}
+    .tag-badge{background:rgba(255,255,255,0.02);padding:6px 10px;border-radius:999px;font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">AP</div>
+        <div>
+          <h1>ANUDEEP P P</h1>
+          <div class="muted">B.Tech CSE — Computer Science Student</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card intro">
+        <h2>Hello — I'm Anudeep</h2>
+        <p>I am a Computer Science student with an interest in coding and technology. Currently learning Python and C, and exploring new concepts through projects.</p>
+        <div class="row cta">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="#contact">Contact Me</a>
+          <a class="btn" href="#" onclick="alert('Replace with your resume link')">Download CV</a>
+        </div>
+
+        <hr style="margin:14px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
+        <div class="row">
+          <div class="tag-badge">Open to learning</div>
+          <div class="muted">Based in India</div>
+        </div>
+      </div>
+
+      <aside class="card profile">
+        <div class="avatar">A</div>
+        <div style="font-weight:600">ANUDEEP P P</div>
+        <div class="tag">Python • C • Problem Solving</div>
+        <div style="display:flex;gap:8px;margin-top:8px">
+          <a class="btn" href="#" onclick="alert('Replace with LinkedIn')">LinkedIn</a>
+          <a class="btn" href="#" onclick="alert('Replace with GitHub')">GitHub</a>
+        </div>
+      </aside>
+    </section>
+
+    <main class="grid-2">
+      <section>
+        <div id="projects" class="card" style="margin-bottom:16px">
+          <h2 style="margin-bottom:8px">Projects</h2>
+          <div class="projects">
+            <article class="proj-card">
+              <h3>Smartphone Recommendation System</h3>
+              <p class="muted">A system that recommends smartphones based on user requirements using API integration.</p>
+              <div class="tech">Python • APIs • DBMS</div>
+            </article>
+
+            <article class="proj-card">
+              <h3>Mini Projects</h3>
+              <p class="muted">Various college mini projects to practice coding and database design.</p>
+              <div class="tech">C • SQL • HTML</div>
+            </article>
+          </div>
+        </div>
+
+        <div id="about" class="card">
+          <h2 style="margin-bottom:8px">About me</h2>
+          <p class="muted">I'm a Computer Science student who enjoys coding and problem-solving. My current focus is on learning Python and C while building applications that solve real-world problems.</p>
+
+          <div style="margin-top:14px">
+            <h3 style="margin-bottom:6px">Education</h3>
+            <p class="muted">B.Tech — Computer Science & Engineering (Business Systems)</p>
+          </div>
+        </div>
+      </section>
+
+      <aside>
+        <div id="skills" class="card skills">
+          <h3>Skills</h3>
+          <div class="skill"><div>Python</div><div class="bar" style="width:120px"><i style="width:70%"></i></div></div>
+          <div class="skill"><div>C</div><div class="bar" style="width:120px"><i style="width:65%"></i></div></div>
+          <div class="skill"><div>SQL (Beginner)</div><div class="bar" style="width:120px"><i style="width:40%"></i></div></div>
+        </div>
+
+        <div id="contact" class="card contact" style="margin-top:16px">
+          <h3>Contact</h3>
+          <form onsubmit="event.preventDefault();alert('Replace this with your email sending code or mailto link');">
+            <input placeholder="Your name" required />
+            <input placeholder="Your email" type="email" required />
+            <textarea placeholder="Message" required></textarea>
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <button class="btn primary" type="submit">Send</button>
+              <a class="btn" href="mailto:ppanudeepkappad@gmail.com">Email: ppanudeepkappad@gmail.com</a>
+            </div>
+          </form>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div class="muted">© 2025 ANUDEEP P P — Built with ❤️ • Edit this file to personalise</div>
+    </footer>
+  </div>
+</body>
+</html>
